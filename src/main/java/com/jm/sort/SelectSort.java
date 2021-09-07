@@ -2,6 +2,9 @@ package com.jm.sort;
 
 import java.util.Arrays;
 
+/**
+ * 选择排序
+ */
 public class SelectSort {
     public static void main(String[] args) {
         int[] array = {23,3,22,5,6,1,16};
