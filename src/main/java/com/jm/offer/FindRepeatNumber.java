@@ -41,7 +41,7 @@ public class FindRepeatNumber {
         int[] array = new int[nums.length];
         for (int i = 0; i < nums.length; i++) {
             array[nums[i]]++;
-            if (array[nums[i]] it> 1) return nums[i];
+            if (array[nums[i]] > 1) return nums[i];
         }
         return -1;
     }
