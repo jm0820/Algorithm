@@ -1,5 +1,8 @@
 package com.jm.offer;
 
+/**
+ * 青蛙跳台阶问题
+ */
 public class Qingwa {
     public static void main(String[] args) {
 
