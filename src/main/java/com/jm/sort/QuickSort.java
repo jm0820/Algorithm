@@ -3,7 +3,26 @@ package com.jm.sort;
 import java.util.Arrays;
 
 /**
+ * https://www.cnblogs.com/E-Dreamer-Blogs/p/12944766.html
+ * https://zhuanlan.zhihu.com/p/61100522
  * 快速排序
+ * 时间复杂度
+ * 平均情况：
+ * 最坏情况：
+ * 最好情况：
+ *
+ * 空间复杂度
+ * 稳定性
+ * 复杂性
+ */
+/**
+ * 核心： partition 过程，  一个大于区和一个小于区和一个划分值，最初的划分值为数组的最后一位，小于区指针最初为 l-1，大于区指针为r。
+ *
+ * 逻辑： 1.当前值小于划分值时， 将小于区的下一位和当前值交换，小于区向右扩一个位置（less++）, 当前值跳下一个位置（l++）。
+ *
+ * 　　　 2.当前值大于划分值时， 将大于区的前一位和当前值交换，大于区向左扩一个位置（more--）。
+ *
+ * 　　　 3. 当前值等于划分值时，当前值直接跳下一个位置（l++）。
  */
 public class QuickSort {
     public static void main(String[] args) {
@@ -49,7 +68,6 @@ public class QuickSort {
                 stack[top++] = high;
             }
         }
-
         System.out.println("排序后："+Arrays.toString(array));
     }
 
@@ -64,6 +82,12 @@ public class QuickSort {
         System.out.println("排序后："+Arrays.toString(array));
     }
 
+    /**
+     * 快速排序全过程
+     * @param array 待排序的数组
+     * @param start 开始下标
+     * @param end 结束下标
+     */
     private static void quickSort1(int[] array, int start, int end) {
         //返回基准点
         int par = partion(array,start,end);
@@ -114,6 +138,17 @@ public class QuickSort {
 
     //优化
     //1、聚集相同元素法
+
+    /**
+     *
+     * @param array
+     * @param start
+     * @param end
+     * @param par
+     * @param left
+     * @param right
+     * @return
+     */
     private static int[] focus(int[] array,int start,int end,int par,int left,int right){
         //聚集和基准元素相同的元素
         //左边找
